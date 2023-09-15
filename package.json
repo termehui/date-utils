@@ -2,15 +2,15 @@
     "private": false,
     "type": "module",
     "license": "ISC",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "name": "@termehui/date-utils",
     "description": "Date helper and functions (jalaali)",
     "main": "./dist/date-utils.umd.js",
-    "module": "./dist/date-utils.js",
+    "module": "./dist/date-utils.es.js",
     "types": "./dist/dateUtils.d.ts",
     "exports": {
         ".": {
-            "import": "./dist/date-utils.js",
+            "import": "./dist/date-utils.es.js",
             "require": "./dist/date-utils.umd.cjs"
         }
     },

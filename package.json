@@ -1,0 +1,54 @@
+{
+    "private": false,
+    "type": "module",
+    "license": "ISC",
+    "version": "1.0.0",
+    "name": "@termehui/date-utils",
+    "description": "Date helper and functions (jalaali)",
+    "main": "./dist/date-utils.umd.js",
+    "module": "./dist/date-utils.js",
+    "types": "./dist/dateUtils.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/date-utils.js",
+            "require": "./dist/date-utils.umd.cjs"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "keywords": [
+        "date",
+        "utility",
+        "helper",
+        "momentjs",
+        "jalaali"
+    ],
+    "authors": [
+        {
+            "email": "m.ajamekramy@gmail.com",
+            "homepage": "http://ekramy.ir",
+            "name": "Mojtaba Ekramy",
+            "role": "Developer"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/termehui/date-utils"
+    },
+    "scripts": {
+        "build:types": "tsc --project tsconfig.types.json --declaration --emitDeclarationOnly --outDir dist",
+        "build": "vite build && npm run build:types",
+        "prepare": "npm run build",
+        "test": "vitest"
+    },
+    "devDependencies": {
+        "@types/moment-jalaali": "^0.7.6",
+        "@types/node": "^20.6.1",
+        "typescript": "^5.2.2",
+        "vite": "^4.4.9",
+        "vitest": "^0.34.4",
+        "moment": "^2.29.4",
+        "moment-jalaali": "^0.10.0"
+    }
+}

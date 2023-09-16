@@ -1,4 +1,4 @@
-import * as moment from "moment-jalaali";
+import moment from "moment-jalaali";
 moment.loadPersian({ dialect: "persian-modern" });
 moment.locale("en");
 
@@ -33,7 +33,7 @@ export function parseFrom(date: string, format: string): moment.Moment {
  */
 export function ago(date: moment.Moment, locale: "fa" | "en"): string {
     if (date.isValid()) {
-        date.locale(locale).fromNow();
+        return date.locale(locale).fromNow();
     }
     return "";
 }

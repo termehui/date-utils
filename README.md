@@ -29,6 +29,15 @@ Parse standard unformatted gregorian date string.
 function parse(date: string): Moment;
 ```
 
+### ParseISO
+
+Parse standard date from ISO8601 (`YYYY-MM-DDTHH:mm:ssZ`) format.
+
+```ts
+// Signature
+function parseISO(date: string): Moment;
+```
+
 ### ParseFrom
 
 Parse formatted date from string. For parse jalali date use format params with **j** prefix (see [moment-jalaali](https://github.com/jalaali/moment-jalaali)).

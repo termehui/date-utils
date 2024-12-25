@@ -13,6 +13,16 @@ export function parse(date: string): moment.Moment {
 }
 
 /**
+ * parse standard date from ISO8601 (RFC3339) format
+ *
+ * @param date standard gregorian date string
+ * @returns Moment object
+ */
+export function parseISO(date: string): moment.Moment {
+    return moment(date, moment.ISO_8601);
+}
+
+/**
  * parse formatted date from string
  * for parse jalali date use format params with [j] prefix
  *

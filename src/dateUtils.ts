@@ -8,7 +8,7 @@ moment.locale("en");
  * @param date standard gregorian date string
  * @returns Moment object
  */
-export function parse(date: string): moment.Moment {
+export function parse(date: any): moment.Moment {
     return moment(date || "-");
 }
 
@@ -18,8 +18,8 @@ export function parse(date: string): moment.Moment {
  * @param date standard gregorian date string
  * @returns Moment object
  */
-export function parseRFC3339Nano(date: string): moment.Moment {
-    return moment(date || "-", "YYYY-MM-DDTHH:mm:ss.SSSSSSSSSZ");
+export function parseRFC3339Nano(date: any): moment.Moment {
+    return moment(date || "-", "YYYY-MM-DDTHH:mm:ss.SSSSSSSSSZ", true);
 }
 
 /**

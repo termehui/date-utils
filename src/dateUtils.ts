@@ -9,17 +9,17 @@ moment.locale("en");
  * @returns Moment object
  */
 export function parse(date: string): moment.Moment {
-    return moment(date);
+    return moment(date || "-");
 }
 
 /**
- * parse standard date from ISO8601 (RFC3339) format
+ * parse standard date from RFC3339 format
  *
  * @param date standard gregorian date string
  * @returns Moment object
  */
-export function parseISO(date: string): moment.Moment {
-    return moment(date, moment.ISO_8601);
+export function parseRFC3339Nano(date: string): moment.Moment {
+    return moment(date || "-", "YYYY-MM-DDTHH:mm:ss.SSSSSSSSSZ");
 }
 
 /**

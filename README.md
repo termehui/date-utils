@@ -29,13 +29,13 @@ Parse standard unformatted gregorian date string.
 function parse(date: string): Moment;
 ```
 
-### ParseISO
+### parseRFC3339Nano
 
-Parse standard date from ISO8601 (`YYYY-MM-DDTHH:mm:ssZ`) format.
+Parse standard date from RFC3339Nano (`YYYY-MM-DDTHH:mm:ss.SSSSSSSSSZ`) format.
 
 ```ts
 // Signature
-function parseISO(date: string): Moment;
+function parseRFC3339Nano(date: string): Moment;
 ```
 
 ### ParseFrom

@@ -2,6 +2,9 @@ import moment from "moment-jalaali";
 moment.loadPersian({ dialect: "persian-modern" });
 moment.locale("en");
 
+export const RFC3339 = "YYYY-MM-DDTHH:mm:ssZ";
+export const RFC3339Nano = "YYYY-MM-DDTHH:mm:ss.SSSSSSSSSZ";
+
 /**
  * parse standard unformatted gregorian date string
  *
@@ -18,8 +21,18 @@ export function parse(date: any): moment.Moment {
  * @param date standard gregorian date string
  * @returns Moment object
  */
+export function parseRFC3339(date: any): moment.Moment {
+    return moment(date || "-", RFC3339, true);
+}
+
+/**
+ * parse standard date from RFC3339Nano format
+ *
+ * @param date standard gregorian date string
+ * @returns Moment object
+ */
 export function parseRFC3339Nano(date: any): moment.Moment {
-    return moment(date || "-", "YYYY-MM-DDTHH:mm:ss.SSSSSSSSSZ", true);
+    return moment(date || "-", RFC3339Nano, true);
 }
 
 /**

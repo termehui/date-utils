@@ -26,7 +26,16 @@ Parse standard unformatted gregorian date string.
 
 ```ts
 // Signature
-function parse(date: string): Moment;
+function parse(date: any): Moment;
+```
+
+### parseRFC3339
+
+Parse standard date from RFC3339 (`YYYY-MM-DDTHH:mm:ssZ`) format.
+
+```ts
+// Signature
+function parseRFC3339(date: any): Moment;
 ```
 
 ### parseRFC3339Nano
@@ -35,7 +44,7 @@ Parse standard date from RFC3339Nano (`YYYY-MM-DDTHH:mm:ss.SSSSSSSSSZ`) format.
 
 ```ts
 // Signature
-function parseRFC3339Nano(date: string): Moment;
+function parseRFC3339Nano(date: any): Moment;
 ```
 
 ### ParseFrom

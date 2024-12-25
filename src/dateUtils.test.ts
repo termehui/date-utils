@@ -1,5 +1,11 @@
 import { test, expect } from "vitest";
-import { ago, humanize, parse, parseRFC3339Nano } from "./dateUtils";
+import {
+    ago,
+    humanize,
+    parse,
+    parseRFC3339,
+    parseRFC3339Nano,
+} from "./dateUtils";
 import moment from "moment-jalaali";
 
 test("humanize", () => {
@@ -8,6 +14,12 @@ test("humanize", () => {
 
 test("parse", () => {
     expect(parse("2020-01-02").format("")).toBe("2020-01-02T00:00:00+03:30");
+});
+
+test("parseRFC3339", () => {
+    expect(
+        parseRFC3339("2020-01-02T00:00:01+03:30").format("YYYY-MM-DDTHH:mm:ssZ")
+    ).toBe("2020-01-02T00:00:01+03:30");
 });
 
 test("parseRFC3339Nano", () => {
